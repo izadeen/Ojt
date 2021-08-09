@@ -9,4 +9,14 @@ public class Trailer extends Vehicle {
     public Trailer( Action service, Status status) {
         super(service, status);
     }
+
+    @Override
+    public int getFuelingTime() {
+        return 5;
+    }
+
+    @Override
+    public int getCleaningTime() {
+        return 6;
+    }
 }

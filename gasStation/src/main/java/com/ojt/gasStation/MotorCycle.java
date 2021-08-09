@@ -9,4 +9,14 @@ public class MotorCycle extends Vehicle {
     public MotorCycle(Action service, Status status) {
         super(service, status);
     }
+
+    @Override
+    public int getFuelingTime() {
+        return 2;
+    }
+
+    @Override
+    public int getCleaningTime() {
+        return 1;
+    }
 }

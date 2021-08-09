@@ -6,6 +6,16 @@ public class Private extends Vehicle {
     }
 
     @Override
+    public int getFuelingTime() {
+        return 4;
+    }
+
+    @Override
+    public int getCleaningTime() {
+        return 3;
+    }
+
+    @Override
     public String toString() {
         return super.toString()+" with type Trailer";
     }

@@ -1,6 +1,6 @@
 package com.ojt.gasStation;
 
-public  abstract class Vehicle {
+public  abstract class Vehicle  {
     private static int counter=0;
     private int id;
     private Action service;
@@ -17,6 +17,9 @@ public  abstract class Vehicle {
         this.status = status;
     }
 
+
+    public abstract int getFuelingTime();
+    public abstract int getCleaningTime();
     public int getId() {
         return id;
     }
@@ -25,19 +28,19 @@ public  abstract class Vehicle {
         this.id = id;
     }
 
-    public Action getService() {
+    public synchronized Action getService() {
         return service;
     }
 
-    public void setService(Action service) {
+    public synchronized void setService(Action service) {
         this.service = service;
     }
 
-    public Status getStatus() {
+    public synchronized Status getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
+    public synchronized void setStatus(Status status) {
         this.status = status;
     }
 }
